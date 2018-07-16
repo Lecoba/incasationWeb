@@ -93,7 +93,7 @@ class TransactionController {
 
     def search() {
         List<Bank> list = Bank.list()
-        respond new Transaction(params), model: [banks : list]
+        respond new Transaction(params), model: [banks: list]
     }
 
     def searchList() {
@@ -105,7 +105,7 @@ class TransactionController {
         String transactionDateVal = String.valueOf(params.transactionDate)
         LocalDateTime transactionDate = LocalDateTime.parse(transactionDateVal)
 
-        List<Transaction> searchResultList = Transaction.createCriteria().list{
+        List<Transaction> searchResultList = Transaction.createCriteria().list {
             if (!user.isEmpty()) {
                 eq('user', params.user)
             }
