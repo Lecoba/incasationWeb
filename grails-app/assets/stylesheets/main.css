@@ -9,7 +9,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* BASE LAYOUT */
-
+#tableColor
+{
+    font-weight: normal;
+    font-size: 1.25em;
+    margin: 0.8em 0 0.3em 0;
+    color: white;
+}
 html {
     background-color: #ddd;
     background-image: -moz-linear-gradient(center top, #aaa, #ddd);
@@ -84,7 +90,7 @@ img {
 }
 
 .footer {
-    background: #424649;
+    background: #10a772;
     color: #ffffff;
     clear: both;
     font-size: 0.8em;
@@ -440,14 +446,16 @@ th.desc a {
 
 .odd {
     background: #f7f7f7;
+    border: 1px solid #10a772;
 }
 
 .even {
-    background: #ffffff;
+    background: #f7f7f7;
+    border: 1px solid #10a772;
 }
 
 th:hover, tr:hover {
-    background: #f5f5f5;
+    background:#10a772;;
 }
 
 /* PAGINATION */
