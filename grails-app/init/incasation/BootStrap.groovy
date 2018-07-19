@@ -31,7 +31,7 @@ class BootStrap {
             returnArray['transactionDate'] = it.transactionDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm"))
             return returnArray
         }
-
+        Locale.setDefault(new Locale("arm"));
         def adminRole = Role.findOrSaveWhere(authority: 'ROLE_ADMIN')
         def userRole = Role.findOrSaveWhere(authority: 'ROLE_USER')
 

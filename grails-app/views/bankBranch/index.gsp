@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="layout" content="main" />
+        <meta name="layout" content="mainTwo" />
         <g:set var="entityName" value="${message(code: 'bankBranch.label', default: 'BankBranch')}" />
         <title><g:message code="default.list.label" args="[entityName]" /></title>
     </head>
@@ -10,7 +10,7 @@
         <div class="nav" role="navigation">
             <ul>
                 <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-                <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+                <li><g:link class="create" action="create"><g:message code="default.bankBranchCreate.label" args="[entityName]" /></g:link></li>
             </ul>
         </div>
         <div id="list-bankBranch" class="content scaffold-list" role="main">

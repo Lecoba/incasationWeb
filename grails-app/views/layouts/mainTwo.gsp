@@ -18,7 +18,7 @@
 <div class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <h1 id="tableColor">ՀԱՅԻՆԿԱՍԱՑԻԱ</h1>
+            <h1 id="tableColor" style="font-size: 30px">ՀԱՅԻՆԿԱՍԱՑԻԱ</h1>
             <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
                 <ul class="nav navbar-nav navbar-right">
                     <g:pageProperty name="page.nav" />
@@ -30,8 +30,8 @@
 </div>
 <table style="width:100%">
     <tr>
-        <th style="width:20%"><a href="/">Գործարքներ</a></th>
-        <th style="width:20%"><a href="/">Կազմակերպություններ</a></th>
+        <th style="width:20%" ><a href="/">Գործարքներ</a></th>
+        <th style="width:20%"><g:link controller="bank" action="index"><g:message code="default.bankBranch.label" /></g:link></th>
         <th style="width:20%"><a href="/">Մասնաճյուղեր</a></th>
         <th style="width:20%"><a href="/">Օգտատերեր</a></th>
         <th style="width:20%"><a href="/">Դերեր</a></th>
