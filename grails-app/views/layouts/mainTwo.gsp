@@ -31,10 +31,10 @@
 <table style="width:100%">
     <tr>
         <th style="width:20%" ><a href="/">Գործարքներ</a></th>
-        <th style="width:20%"><g:link controller="bank" action="index"><g:message code="default.bankBranch.label" /></g:link></th>
-        <th style="width:20%"><a href="/">Մասնաճյուղեր</a></th>
-        <th style="width:20%"><a href="/">Օգտատերեր</a></th>
-        <th style="width:20%"><a href="/">Դերեր</a></th>
+        <th style="width:20%"><g:link controller="bank" action="index"><g:message code="default.bank.label" /></g:link></th>
+        <th style="width:20%"><g:link controller="bankBranch" action="index"><g:message code="default.bankBranch.label" /></g:link></th>
+        <th style="width:20%"><g:link controller="user" action="index"><g:message code="default.user.label" /></g:link></th>
+        <th style="width:20%"><g:link controller="role" action="index"><g:message code="default.roles.label" /></g:link></th>
     </tr>
 </table>
 <g:layoutBody/>
