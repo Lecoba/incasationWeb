@@ -39,7 +39,7 @@ class BankController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'bank.label', default: 'Bank'), bank.id])
+                flash.message = message(code: 'default.createdBank.message', args: [message(code: 'bank.label', default: 'Bank'), bank.id])
                 redirect bank
             }
             '*' { respond bank, [status: CREATED] }
@@ -65,7 +65,7 @@ class BankController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'bank.label', default: 'Bank'), bank.id])
+                flash.message = message(code: 'default.updatedBank.message', args: [message(code: 'bank.label', default: 'Bank'), bank.id])
                 redirect bank
             }
             '*'{ respond bank, [status: OK] }
@@ -82,7 +82,7 @@ class BankController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'bank.label', default: 'Bank'), id])
+                flash.message = message(code: 'default.deletedBank.message', args: [message(code: 'bank.label', default: 'Bank'), id])
                 redirect action:"index", method:"GET"
             }
             '*'{ render status: NO_CONTENT }
@@ -92,7 +92,7 @@ class BankController {
     protected void notFound() {
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'bank.label', default: 'Bank'), params.id])
+                flash.message = message(code: 'default.not.foundBank.message', args: [message(code: 'bank.label', default: 'Bank'), params.id])
                 redirect action: "index", method: "GET"
             }
             '*'{ render status: NOT_FOUND }

@@ -41,7 +41,7 @@ class TransactionController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'transaction.label', default: 'Transaction'), transaction.id])
+                flash.message = message(code: 'default.createdTransaction.message', args: [message(code: 'transaction.label', default: 'Transaction'), transaction.id])
                 redirect transaction
             }
             '*' { respond transaction, [status: CREATED] }
@@ -67,7 +67,7 @@ class TransactionController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'transaction.label', default: 'Transaction'), transaction.id])
+                flash.message = message(code: 'default.updatedTransaction.message', args: [message(code: 'transaction.label', default: 'Transaction'), transaction.id])
                 redirect transaction
             }
             '*' { respond transaction, [status: OK] }
@@ -84,7 +84,7 @@ class TransactionController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'transaction.label', default: 'Transaction'), id])
+                flash.message = message(code: 'default.deletedTransaction.message', args: [message(code: 'transaction.label', default: 'Transaction'), id])
                 redirect action: "index", method: "GET"
             }
             '*' { render status: NO_CONTENT }
@@ -132,7 +132,7 @@ class TransactionController {
     protected void notFound() {
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'transaction.label', default: 'Transaction'), params.id])
+                flash.message = message(code: 'default.not.foundTransaction.message', args: [message(code: 'transaction.label', default: 'Transaction'), params.id])
                 redirect action: "index", method: "GET"
             }
             '*' { render status: NOT_FOUND }

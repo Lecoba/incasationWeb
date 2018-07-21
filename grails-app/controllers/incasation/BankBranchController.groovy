@@ -39,7 +39,7 @@ class BankBranchController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'bankBranch.label', default: 'BankBranch'), bankBranch.id])
+                flash.message = message(code: 'default.createdBankBranch.message', args: [message(code: 'bankBranch.label', default: 'BankBranch'), bankBranch.id])
                 redirect bankBranch
             }
             '*' { respond bankBranch, [status: CREATED] }
@@ -65,7 +65,7 @@ class BankBranchController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'bankBranch.label', default: 'BankBranch'), bankBranch.id])
+                flash.message = message(code: 'default.updatedBankBranch.message', args: [message(code: 'bankBranch.label', default: 'BankBranch'), bankBranch.id])
                 redirect bankBranch
             }
             '*'{ respond bankBranch, [status: OK] }
@@ -82,7 +82,7 @@ class BankBranchController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'bankBranch.label', default: 'BankBranch'), id])
+                flash.message = message(code: 'default.deletedBankBranch.message', args: [message(code: 'bankBranch.label', default: 'BankBranch'), id])
                 redirect action:"index", method:"GET"
             }
             '*'{ render status: NO_CONTENT }
@@ -92,7 +92,7 @@ class BankBranchController {
     protected void notFound() {
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'bankBranch.label', default: 'BankBranch'), params.id])
+                flash.message = message(code: 'default.not.foundBankBranch.message', args: [message(code: 'bankBranch.label', default: 'BankBranch'), params.id])
                 redirect action: "index", method: "GET"
             }
             '*'{ render status: NOT_FOUND }

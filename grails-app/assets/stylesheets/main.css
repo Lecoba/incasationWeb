@@ -2,6 +2,7 @@
 body,
 input, select, textarea {
     font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -161,7 +162,7 @@ img {
     text-decoration: underline;
 }
 
-.nav a.home, .nav a.list, .nav a.create {
+.nav a.home, .nav a.list, .nav a.create ,.nav a.search,.nav a.user{
     background-position: 0.7em center;
     background-repeat: no-repeat;
     text-indent: 25px;
@@ -170,7 +171,9 @@ img {
 .nav a.home {
     background-image: url(../images/skin/house.png);
 }
-
+.nav a.user {
+    background-image: url(../images/skin/userIco.png);
+}
 .nav a.list {
     background-image: url(../images/skin/database_table.png);
 }
@@ -178,10 +181,15 @@ img {
 .nav a.create {
     background-image: url(../images/skin/database_add.png);
 }
+.nav a.search{
+    background-image: url(../images/skin/searchIcon.png);
+}
+
 
 .nav li.dropdown.open ul.dropdown-menu {
     background-color: #424649;
 }
+
 
 /* CREATE/EDIT FORMS AND SHOW PAGES */
 
@@ -229,9 +237,10 @@ label {
 
 input, select, textarea {
     background-color: #fcfcfc;
-    border: 1px solid #cccccc;
+    border: 1px solid #10a772;
     font-size: 1em;
     padding: 0.2em 0.4em;
+
 }
 
 select {
@@ -551,6 +560,8 @@ th:hover, tr:hover {
     background-repeat: no-repeat;
     text-indent: 25px;
 }
+
+
 
 .buttons .delete {
     background-image: url(../images/skin/database_delete.png);

@@ -11,7 +11,7 @@
             <ul>
 
                 <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-                <li><g:link class="create" action="create"><g:message code="default.user.label" args="[entityName]" /></g:link></li>
+                <li><g:link class="user" action="create"><g:message code="default.user.label" args="[entityName]" /></g:link></li>
             </ul>
         </div>
         <div id="edit-user" class="content scaffold-edit" role="main">

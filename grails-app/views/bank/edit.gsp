@@ -11,7 +11,7 @@
             <ul>
 
                 <li><g:link class="list" action="index"><g:message code="default.bankԼist.label" args="[entityName]" /></g:link></li>
-                <li><g:link class="create" action="create"><g:message code="default.bankCreate.label" args="[entityName]" /></g:link></li>
+                <li><g:link class="home" action="create"><g:message code="default.bankCreate.label" args="[entityName]" /></g:link></li>
             </ul>
         </div>
         <div id="edit-bank" class="content scaffold-edit" role="main">

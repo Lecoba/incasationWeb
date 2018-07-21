@@ -12,7 +12,7 @@
 
                 <li><g:link class="list" action="index"><g:message code="default.userList.label" args="[entityName]" /></g:link></li>
 <sec:ifAllGranted roles='ROLE_ADMIN'>
-                <li><g:link class="create" action="create"><g:message code="default.newUser.label" args="[entityName]" /></g:link></li>
+                <li><g:link class="user" action="create"><g:message code="default.newUser.label" args="[entityName]" /></g:link></li>
 </sec:ifAllGranted>
             </ul>
         </div>

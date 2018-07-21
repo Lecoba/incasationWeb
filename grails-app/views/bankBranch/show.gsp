@@ -12,7 +12,7 @@
 
                 <li><g:link class="list" action="index"><g:message code="default.bankBranchList.label" args="[entityName]" /></g:link></li>
 <sec:ifAllGranted roles='ROLE_ADMIN'>
-                <li><g:link class="create" action="create"><g:message code="default.bankBranchCreate.label" args="[entityName]" /></g:link></li>
+                <li><g:link class="home" action="create"><g:message code="default.bankBranchCreate.label" args="[entityName]" /></g:link></li>
 </sec:ifAllGranted>
             </ul>
         </div>
