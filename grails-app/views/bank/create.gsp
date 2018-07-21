@@ -13,6 +13,7 @@
                 <li><g:link class="list" action="index"><g:message code="default.bankԼist.label" args="[entityName]" /></g:link></li>
             </ul>
         </div>
+
         <div id="create-bank" class="content scaffold-create" role="main">
             <h1><g:message code="default.bankCreate.label" args="[entityName]" /></h1>
             <g:if test="${flash.message}">
@@ -34,5 +35,6 @@
                 </fieldset>
             </g:form>
         </div>
+
     </body>
 </html>

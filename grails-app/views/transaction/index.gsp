@@ -11,6 +11,7 @@
             <ul>
 
                 <li><g:link class="create" action="create"><g:message code="default.transactionsCreate.label" args="[entityName]" /></g:link></li>
+                <li><g:link class="create" action="search"><g:message code="default.searchTransaction.label" args="[entityName]" /></g:link></li>
             </ul>
         </div>
         <div id="list-transaction" class="content scaffold-list" role="main">

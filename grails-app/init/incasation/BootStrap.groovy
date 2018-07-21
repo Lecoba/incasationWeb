@@ -34,6 +34,8 @@ class BootStrap {
         Locale.setDefault(new Locale("arm"));
         def adminRole = Role.findOrSaveWhere(authority: 'ROLE_ADMIN')
         def userRole = Role.findOrSaveWhere(authority: 'ROLE_USER')
+        def bank = Bank.create()
+        bank.name = "Ameria"
 
         def admin = User.findOrSaveWhere(username: 'admin', password: 'admin')
         def user = User.findOrSaveWhere(username: 'incasator', password: 'incasator')

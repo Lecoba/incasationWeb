@@ -9,8 +9,9 @@
         <a href="#list-user" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
         <div class="nav" role="navigation">
             <ul>
-
+<sec:ifAllGranted roles='ROLE_ADMIN'>
                 <li><g:link class="create" action="create"><g:message code="default.newUser.label" args="[entityName]" /></g:link></li>
+</sec:ifAllGranted>
             </ul>
         </div>
         <div id="list-user" class="content scaffold-list" role="main">
