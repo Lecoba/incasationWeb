@@ -7,7 +7,7 @@ import java.time.LocalDateTime
 
 import static org.springframework.http.HttpStatus.*
 
-@Secured(['ROLE_ADMIN'])
+@Secured(['ROLE_ADMIN', 'ROLE_USER'])
 class TransactionController {
 
     TransactionService transactionService
