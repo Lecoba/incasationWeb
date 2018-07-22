@@ -4,6 +4,7 @@ import grails.plugin.springsecurity.annotation.Secured
 import grails.validation.ValidationException
 
 import java.time.LocalDateTime
+import java.time.ZoneId
 
 import static org.springframework.http.HttpStatus.*
 
@@ -102,8 +103,10 @@ class TransactionController {
         String currency = String.valueOf(params.currency)
         String destinationBank = String.valueOf(params.destinationBank)
         String destinationBankBranch = String.valueOf(params.destinationBankBranch)
-        String transactionDateVal = String.valueOf(params.transactionDate)
-        LocalDateTime transactionDate = LocalDateTime.parse(transactionDateVal)
+        Date transactionDateAfter = params.transactionDateAfter
+        Date transactionDateBefore = params.transactionDateBefore
+        LocalDateTime afterDateTime = transactionDateAfter ? LocalDateTime.ofInstant(transactionDateAfter.toInstant(), ZoneId.systemDefault()) : null
+        LocalDateTime beforeDateTime = transactionDateBefore ? LocalDateTime.ofInstant(transactionDateBefore.toInstant(), ZoneId.systemDefault()) : null
 
         List<Transaction> searchResultList = Transaction.createCriteria().list {
             if (!user.isEmpty()) {
@@ -121,8 +124,12 @@ class TransactionController {
             if (!destinationBankBranch.isEmpty()) {
                 eq('destinationBankBranch', params.destinationBankBranch)
             }
-            if (!transactionDateVal.isEmpty()) {
-                eq('transactionDate', transactionDate)
+            if (afterDateTime && beforeDateTime) {
+                between("transactionDate", afterDateTime, beforeDateTime)
+            } else if (afterDateTime) {
+                ge("transactionDate", afterDateTime)
+            } else if (beforeDateTime) {
+                le("transactionDate", beforeDateTime)
             }
         } as List<Transaction>
 
