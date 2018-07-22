@@ -106,8 +106,7 @@ class TransactionController {
         Date transactionDateAfter = params.transactionDateAfter
         Date transactionDateBefore = params.transactionDateBefore
         LocalDateTime afterDateTime = transactionDateAfter ? LocalDateTime.ofInstant(transactionDateAfter.toInstant(), ZoneId.systemDefault()) : null
-        LocalDateTime beforeDateTime = transactionDateBefore ? LocalDateTime.ofInstant(transactionDateBefore.toInstant(), ZoneId.systemDefault()) : null
-
+        LocalDateTime beforeDateTime = transactionDateBefore ? LocalDateTime.ofInstant(transactionDateBefore.toInstant(), ZoneId.systemDefault()).plusHours(24) : null
         List<Transaction> searchResultList = Transaction.createCriteria().list {
             if (!user.isEmpty()) {
                 eq('user', params.user)

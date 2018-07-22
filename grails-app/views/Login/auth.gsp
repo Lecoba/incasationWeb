@@ -35,7 +35,7 @@
         clear: left;
         margin: 0;
         padding: 4px 0 3px 0;
-        padding-left: 105px;
+        padding-left: 125px;
         margin-bottom: 20px;
         height: 1%;
     }

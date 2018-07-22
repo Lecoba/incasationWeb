@@ -32,21 +32,22 @@ class BootStrap {
             return returnArray
         }
         Locale.setDefault(new Locale("arm"));
-        def adminRole = Role.findOrSaveWhere(authority: 'ROLE_ADMIN')
-        def userRole = Role.findOrSaveWhere(authority: 'ROLE_USER')
-        def bank = Bank.create()
-        bank.name = "Ameria"
 
-        def admin = User.findOrSaveWhere(username: 'admin', password: 'admin')
-        def user = User.findOrSaveWhere(username: 'incasator', password: 'incasator')
-
-        if(!admin.getAuthorities().contains(adminRole)){
-           UserRole.create(admin, adminRole, true)
-        }
-
-        if(!user.getAuthorities().contains(userRole)){
-            UserRole.create(user, userRole, true)
-        }
+//        def adminRole = Role.findOrSaveWhere(authority: 'ROLE_ADMIN')
+//        def userRole = Role.findOrSaveWhere(authority: 'ROLE_USER')
+//        def bank = Bank.create()
+//        bank.name = "Ameria"
+//
+//        def admin = User.findOrSaveWhere(username: 'admin', password: 'admin')
+//        def user = User.findOrSaveWhere(username: 'incasator', password: 'incasator')
+//
+//        if(!admin.getAuthorities().contains(adminRole)){
+//           UserRole.create(admin, adminRole, true)
+//        }
+//
+//        if(!user.getAuthorities().contains(userRole)){
+//            UserRole.create(user, userRole, true)
+//        }
     }
 
     def destroy = {

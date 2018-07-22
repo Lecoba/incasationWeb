@@ -146,11 +146,11 @@ img {
 }
 
 .nav a:active, .nav a:visited {
-    color: #666666;
+    color: #10a772;
 }
 
 .nav a:focus, .nav a:hover {
-    background-color: #999999;
+    background-color: #10a772;
     color: #ffffff;
     outline: none;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
@@ -385,7 +385,7 @@ input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
 /* TABLES */
 
 table {
-    border-top: 1px solid #DFDFDF;
+    border: 2px solid rgba(110, 110, 110, 0.43);
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 1em;
@@ -413,7 +413,7 @@ td, th {
 th {
     background-color: #efefef;
     background-image: -moz-linear-gradient(top, #ffffff, #eaeaea);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #eaeaea));
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #c8c8c8));
     filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#ffffff', EndColorStr = '#eaeaea');
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#eaeaea')";
     color: #666666;
@@ -436,7 +436,7 @@ th a:link, th a:visited {
 }
 
 th a:hover, th a:focus {
-    color: #333333;
+    color: rgb(250, 255, 251);
 }
 
 th.sortable a {
@@ -539,7 +539,7 @@ th:hover, tr:hover {
 
 .buttons input:hover, .buttons input:focus,
 .buttons a:hover, .buttons a:focus {
-    background-color: #999999;
+    background-color: #10a772;
     color: #ffffff;
     outline: none;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
@@ -591,4 +591,30 @@ a.skip {
 img.grails-logo {
     height:340px;
     margin-top:-10px;
+}
+
+.uls {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.lis {
+    float: left;
+}
+
+.lis a {
+    display: block;
+    color: #6e6e6e;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.lis a:hover {
+    background-color: #10a772;
+    color: #ffffff;
 }

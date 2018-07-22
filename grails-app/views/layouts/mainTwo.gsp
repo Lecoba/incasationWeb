@@ -28,15 +28,15 @@
 
     </div>
 </div>
-<table style="width:100%">
-    <tr>
-        <th style="width:20%" ><a href="/">Գործարքներ</a></th>
-        <th style="width:20%"><g:link controller="bank" action="index"><g:message code="default.bank.label" /></g:link></th>
-        <th style="width:20%"><g:link controller="bankBranch" action="index"><g:message code="default.bankBranch.label" /></g:link></th>
-        <th style="width:20%"><g:link controller="user" action="index"><g:message code="default.user.label" /></g:link></th>
 
-    </tr>
-</table>
+<ul class="uls">
+    <li class="lis"><a href="/">Գործարքներ</a></li>
+    <li class="lis"><g:link controller="bank" action="index"><g:message code="default.bank.label" /></g:link></li>
+    <li class="lis"><g:link controller="bankBranch" action="index"><g:message code="default.bankBranch.label" /></g:link></li>
+    <li class="lis"><g:link controller="user" action="index"><g:message code="default.user.label" /></g:link></li>
+    <li class="lis"><g:link controller="role" action="index"><g:message code="default.roles.label" /></g:link></li>
+</ul>
+
 <g:layoutBody/>
 
 <div class="footer" role="contentinfo"></div>
