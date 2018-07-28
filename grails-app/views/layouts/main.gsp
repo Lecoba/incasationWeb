@@ -19,7 +19,7 @@
     <div class="container">
         <div class="navbar-header">
             <div class="navbar-header">
-                <h1 style="font-size: 35px;color:  white">ՀԱՅԻՆԿԱՍԱՑԻԱ</h1>
+                <h1 style="font-size: 35px;color:white">ՀԱՅԻՆԿԱՍԱՑԻԱ</h1>
             </div>
             <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
                 <ul class="nav navbar-nav navbar-right">

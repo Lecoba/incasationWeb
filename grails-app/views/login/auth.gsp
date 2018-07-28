@@ -10,25 +10,29 @@
     }
 
     #login .inner {
-        width: 340px;
+        width: 500px;
         padding-bottom: 6px;
         margin: 60px auto;
         text-align: left;
-        border: 1px solid #aab;
-        background-color: #f0f0fa;
-        -moz-box-shadow: 2px 2px 2px #eee;
-        -webkit-box-shadow: 2px 2px 2px #eee;
-        -khtml-box-shadow: 2px 2px 2px #eee;
-        box-shadow: 2px 2px 2px #eee;
+        border: 3px solid #10a772;
+        background-color: #ffffff;
+        -moz-box-shadow: 2px 2px 2px #c8c8c8;
+        -webkit-box-shadow: 2px 2px 2px #c8c8c8;
+        -khtml-box-shadow: 2px 2px 2px #c8c8c8;
+        box-shadow: 2px 2px 2px #c8c8c8;
+        border-radius: 25px;
     }
 
     #login .inner .fheader {
-        padding: 18px 26px 14px 26px;
-        background-color: #f7f7ff;
+        padding: 18px;
+        background-color: rgb(16, 167, 114);
         margin: 0px 0 14px 0;
-        color: #2e3741;
+        text-align: center;
+        color: #ffffff;
         font-size: 18px;
         font-weight: bold;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
 
     #login .inner .cssform p {
@@ -47,19 +51,25 @@
     #login .inner .cssform label {
         font-weight: bold;
         float: left;
-        text-align: right;
+        text-align: center;
         margin-left: -105px;
         width: 110px;
         padding-top: 3px;
         padding-right: 10px;
+        color: rgba(0, 0, 0, 0.53)
     }
 
     #login #remember_me_holder {
         padding-left: 120px;
+        text-align: left;
     }
 
     #login #submit {
         margin-left: 15px;
+        background-color: #10a772;
+        color: white;
+        alignment: center;
+        text-align: center;
     }
 
     #login #remember_me_holder label {
