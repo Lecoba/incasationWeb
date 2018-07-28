@@ -172,7 +172,7 @@ img {
     background-image: url(../images/skin/house.png);
 }
 .nav a.user {
-    background-image: url(../images/skin/userIco.png);
+    background-image: url(../images/skin/user_add.png);
 }
 .nav a.list {
     background-image: url(../images/skin/database_table.png);
@@ -182,7 +182,7 @@ img {
     background-image: url(../images/skin/database_add.png);
 }
 .nav a.search{
-    background-image: url(../images/skin/searchIcon.png);
+    background-image: url(../images/skin/search.png);
 }
 
 
