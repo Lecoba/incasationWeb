@@ -4,6 +4,7 @@
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'incasation.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'incasation.UserRole'
 grails.plugin.springsecurity.authority.className = 'incasation.Role'
+grails.plugin.springsecurity.logout.postOnly = false
 //grails.plugin.springsecurity.active = false
 //grails.converters.json.default.deep=true
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [

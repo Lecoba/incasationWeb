@@ -34,7 +34,7 @@
     <li class="lis"><g:link controller="bank" action="index"><g:message code="default.bank.label" /></g:link></li>
     <li class="lis"><g:link controller="bankBranch" action="index"><g:message code="default.bankBranch.label" /></g:link></li>
     <li class="lis"><g:link controller="user" action="index"><g:message code="default.user.label" /></g:link></li>
-    <li class="lis"><g:link controller="role" action="index"><g:message code="default.roles.label" /></g:link></li>
+    <g:link style="text-align: right; float: right; padding: 14px 16px;" controller='logout' action=''><g:message code="springSecurity.logout.button" /></g:link>
 </ul>
 
 <g:layoutBody/>
