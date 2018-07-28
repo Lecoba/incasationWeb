@@ -41,13 +41,15 @@
                 <f:field property="destinationBankBranch"/>
             </f:with>
 
-            <f:field bean="transaction" property="transactionDate" value="${this.transaction.transactionDate}" label="Գործարքի ամսաթիվ սկսած"
+            <f:field bean="transaction" property="transactionDate" value="${this.transaction.transactionDate}"
+                     label="Գործարքի ամսաթիվ սկսած"
                      required="false">
                 <g:datePicker name="transactionDateAfter" default="none" noSelection="['': '']"
                               precision="day" years="${2018..2050}"/>
             </f:field>
 
-            <f:field bean="transaction" property="transactionDate" value="${this.transaction.transactionDate}" label="Գործարքի ամսաթիվ մինչև"
+            <f:field bean="transaction" property="transactionDate" value="${this.transaction.transactionDate}"
+                     label="Գործարքի ամսաթիվ մինչև"
                      required="false">
                 <g:datePicker name="transactionDateBefore" default="none" noSelection="['': '']"
                               precision="day" years="${2018..2050}"/>
