@@ -16,7 +16,7 @@ class TransactionController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE", searchList: "POST"]
 
     def index(Integer max) {
-        respond transactionService.list(params), model: [transactionCount: transactionService.count()]
+        respond Transaction.listOrderById([order: "desc", max: 100]), model: [transactionCount: transactionService.count()]
     }
 
     def show(Long id) {
