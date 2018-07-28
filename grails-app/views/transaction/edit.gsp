@@ -1,3 +1,4 @@
+<%@ page import="java.time.LocalDate" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,7 +30,8 @@
             <g:form resource="${this.transaction}" method="PUT">
                 <g:hiddenField name="version" value="${this.transaction?.version}" />
                 <fieldset class="form">
-                    <f:all bean="transaction"/>
+                    <f:all bean="transaction" except="transactionDate"/>
+                    %{--<f:field bean="transaction" property="transactionDate"/>--}%
                 </fieldset>
                 <fieldset class="buttons">
                     <input class="save" type="submit" value="${message(code: 'default.button.update.label', default: 'Update')}" />

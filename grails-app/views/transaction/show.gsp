@@ -12,7 +12,8 @@
 
 <div class="nav" role="navigation">
     <ul>
-        <li><g:link class="search" action="search"><g:message code="default.searchTransaction.label" args="[entityName]" /></g:link></li>
+        <li><g:link class="search" action="search"><g:message code="default.searchTransaction.label"
+                                                              args="[entityName]"/></g:link></li>
         <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]"/></g:link></li>
         <li><g:link class="create" action="create"><g:message code="default.new.label"
                                                               args="[entityName]"/></g:link></li>
@@ -24,13 +25,8 @@
     <g:if test="${flash.message}">
         <div class="message" role="status">${flash.message}</div>
     </g:if>
-<f:display bean="transaction" except="transactionDate"/>
-    %{--<f:with bean="transaction">--}%
-        %{--<f:display property="transactionDate"/>--}%
-        %{--<f:display property="user"/>--}%
-        %{--<f:display property="currency"/>--}%
-    %{--</f:with>--}%
-<f:display bean="transaction" property="transactionDate" widget="localDate"/>
+    <f:display bean="transaction" except="transactionDate"/>
+    <f:display bean="transaction" property="transactionDate" widget="localDate"/>
     <g:form resource="${this.transaction}" method="DELETE">
         <fieldset class="buttons">
             <g:link class="edit" action="edit" resource="${this.transaction}"><g:message
