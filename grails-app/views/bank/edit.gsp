@@ -29,7 +29,14 @@
             <g:form resource="${this.bank}" method="PUT">
                 <g:hiddenField name="version" value="${this.bank?.version}" />
                 <fieldset class="form">
-                    <f:all bean="bank"/>
+                    <f:with bean="bank">
+                        <f:field property="name"/>
+                        <f:field property="type">
+                            <g:select name="type" from="${["Գործարքային", "Պայմանագրային"]}" value="${this.bank?.type}"
+                                      noSelection="['': '']"/>
+                        </f:field>
+                        <f:field property="bankBranches"/>
+                    </f:with>
                 </fieldset>
                 <fieldset class="buttons">
                     <input class="save" type="submit" value="${message(code: 'default.button.update.label', default: 'Update')}" />
