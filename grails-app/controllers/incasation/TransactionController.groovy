@@ -15,8 +15,14 @@ class TransactionController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE", searchList: "POST"]
 
-    def index(Integer max) {
-        respond Transaction.listOrderById([order: "desc", max: 100]), model: [transactionCount: transactionService.count()]
+    def index() {
+        if(params.size() <= 1){
+            respond Transaction.listOrderById([order: "desc", max: 100]), model: [transactionCount: transactionService.count()]
+            return
+        }
+
+        params.put("max", 100)
+        respond transactionService.list(params)
     }
 
     def show(Long id) {
