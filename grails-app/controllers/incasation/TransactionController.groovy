@@ -109,6 +109,7 @@ class TransactionController {
         String currency = String.valueOf(params.currency)
         String destinationBank = String.valueOf(params.destinationBank)
         String destinationBankBranch = String.valueOf(params.destinationBankBranch)
+        String bankType = String.valueOf(params.bankType)
         Date transactionDateAfter = params.transactionDateAfter
         Date transactionDateBefore = params.transactionDateBefore
         LocalDateTime afterDateTime = transactionDateAfter ? LocalDateTime.ofInstant(transactionDateAfter.toInstant(), ZoneId.systemDefault()) : null
@@ -123,11 +124,14 @@ class TransactionController {
             if (!currency.isEmpty()) {
                 eq('currency', params.currency)
             }
-            if (!destinationBank.isEmpty()) {
+            if (!destinationBank.isEmpty() && bankType.isEmpty()) {
                 eq('destinationBank', params.destinationBank)
             }
-            if (!destinationBankBranch.isEmpty()) {
+            if (!destinationBankBranch.isEmpty() && bankType.isEmpty()) {
                 eq('destinationBankBranch', params.destinationBankBranch)
+            }
+            if(!bankType.isEmpty()) {
+                'in'('destinationBank', Bank.findAllByType(params.bankType)*.name)
             }
             if (afterDateTime && beforeDateTime) {
                 between("transactionDate", afterDateTime, beforeDateTime)

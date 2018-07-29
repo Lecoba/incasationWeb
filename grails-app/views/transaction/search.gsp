@@ -41,6 +41,13 @@
                 <f:field property="destinationBankBranch"/>
             </f:with>
 
+            <f:field property="bankType" value="${value}"
+                     label="Կազմակերպության տեսակ"
+                     required="false">
+                <g:select name="bankType" from="${["Գործարքային", "Պայմանագրային"]}" value="${value}"
+                          noSelection="['': '']"/>
+            </f:field>
+
             <f:field bean="transaction" property="transactionDate" value="${this.transaction.transactionDate}"
                      label="Գործարքի ամսաթիվ սկսած"
                      required="false">
