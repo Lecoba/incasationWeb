@@ -8,6 +8,6 @@ beans = {
     userPasswordEncoderListener(UserPasswordEncoderListener)
     myConverter(MyDateTimeConverter)
     localeResolver(SessionLocaleResolver) {
-        defaultLocale= new java.util.Locale('arm');
+        defaultLocale= new Locale('arm');
     }
 }

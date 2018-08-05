@@ -44,7 +44,7 @@
             <f:field property="bankType" value="${value}"
                      label="Կազմակերպության տեսակ"
                      required="false">
-                <g:select name="bankType" from="${["Գործարքային", "Պայմանագրային"]}" value="${value}"
+                <g:select name="bankType" from="${["Հաստատագրված", "Պայմանագրային"]}" value="${value}"
                           noSelection="['': '']"/>
             </f:field>
 

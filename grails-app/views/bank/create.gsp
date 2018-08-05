@@ -36,7 +36,7 @@
             <f:with bean="bank">
                 <f:field property="name"/>
                 <f:field property="type">
-                    <g:select name="type" from="${["Գործարքային", "Պայմանագրային"]}" value="${this.bank?.type}"
+                    <g:select name="type" from="${["Հաստատագրված", "Պայմանագրային"]}" value="${this.bank?.type}"
                               noSelection="['': '']"/>
                 </f:field>
                 <f:field property="bankBranches"/>

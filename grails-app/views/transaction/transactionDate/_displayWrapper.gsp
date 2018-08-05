@@ -6,7 +6,7 @@
 </g:if>
 <g:else>
     <div class="fieldcontain property-list">
-        <span id="${this.transaction.transactionDate}-label" class="property-label">TransactionDate</span>
+        <span id="${this.transaction.transactionDate}-label" class="property-label">${message(code: 'transaction.transactionDate.label')}</span>
 
         <div class="property-value"
              aria-labelledby="${this.transaction.transactionDate}-label">${this.transaction.transactionDate.format(DateTimeFormatter.ofPattern(localDatePattern as String, request.getLocale()))}</div>
